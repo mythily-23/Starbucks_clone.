@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order</title>
+    <style>
+        *{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+    font-family: SoDoSans_Light,Helvetica,sans-serif!important;;
+}
+    .header li{
+        display:inline;
+        font-size: 20px;
+        font-family:'Poppins',sans-serif;
+        font-weight:lighter;
+        align-items: center;
+        padding: 0px 40px 0px 60px;
+    
+    
+    }
+    .navbar{
+        display: flex;
+        align-items: center;
+        padding-top: 25px;
+        padding-bottom: 20px;
+        position:relative;
+        height: 100px;
+        width:100%;
+        justify-content:space-around ;
+        background-color: white;
+        box-shadow:0 2px 4px 0 rgba(0,0,0,.2);
+
+    }
+    .image{
+        height:90% ;
+        
+    }
+    .about
+    {
+        height:80%;
+        align-items:center;
+       
+    }
+    .search{
+        border-radius: 20px;
+        width:300px;
+        height:40px;
+        font-size: large;
+    }
+    a{
+        text-decoration: none;
+    }
+    #par1{
+        padding-left: 70px;
+        font-weight:lighter;
+        font-size: 18px;
+        background-color:white;
+        height:50px;
+        padding-top: 12px;
+    }
+    .foodtype li{
+        display:inline;
+        padding-left: 4%;
+        font-size:larger;
+        padding-right: 0.05%;
+        height: 20px;
+        color: #0e382c;
+    }
+    .foodtype{
+        background-color: #f2f0eb;
+        height: 60px;
+        padding-top: 1%;
+        box-shadow:0 2px 4px 0 rgba(0,0,0,.2);
+    }
+    .Bestsellercontent h3{
+        padding-left: 4%;
+        padding-top: 2%;
+        font-size: larger;
+    }
+    .Bestsellercontent p{
+        padding-left: 4%;
+        padding-top: 1%;
+        font-size: larger;
+    }
+    .grid-container{
+        display:grid;
+        grid-template-columns: repeat(3,30%);
+        grid-template-rows: 300px;
+        grid-row-gap: 60px;
+        grid-column-gap:2px; 
+        padding-top: 4%;
+        align-items: center;
+        justify-items: center;
+        justify-content: space-around;
+        padding-left: 1%;
+    
+    }
+    .menuimg{
+        border-radius: 60%;
+        width:130px;
+        height:130px;
+        margin-left: 20px;
+        margin-top: 50px;
+        margin-right: 10px;
+    }
+    .right-cont{
+        padding-left: 1%;
+        padding-top: 6%;
+        line-height: 2;
+        padding-bottom:5px;
+        list-style: none;        
+    }
+    .grid-item-1{
+        display: flex;
+        border-radius: 5%;
+        background-color:#f9f9f9;
+        box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+        transition: all 0.3s ease-in-out;
+    }
+   .grid-item-2{
+    display: flex;
+    box-shadow:0 2px 4px 0 rgba(0,0,0,.2);
+    border-radius: 5%;
+    background-color:#f9f9f9;
+
+   }
+   .grid-item-3{
+    display: flex;
+    box-shadow:0 2px 4px 0 rgba(0,0,0,.2);
+    border-radius: 5%;
+    background-color:#f9f9f9;
+   }
+   .grid-item-4{
+    display: flex;
+    box-shadow:0 2px 4px 0 rgba(0,0,0,.2);
+    border-radius: 5%;
+    background-color:#f9f9f9;
+   }
+   .grid-item-5{
+    display: flex;
+    box-shadow:0 2px 4px 0 rgba(0,0,0,.2);
+    border-radius: 5%;
+    background-color:#f9f9f9;
+
+   }
+   .grid-item-6{
+    display: flex;
+    box-shadow:0 2px 4px 0 rgba(0,0,0,.2);
+    border-radius: 5%;       
+     background-color:#f9f9f9;
+
+   }
+   .grid-item-7{
+    display: flex;
+    box-shadow:0 2px 4px 0 rgba(0,0,0,.2);
+    border-radius: 5%;
+    background-color:#f9f9f9;
+   }
+   .grid-item-8{
+    display: flex;
+    box-shadow:0 2px 4px 0 rgba(0,0,0,.2);
+    border-radius: 5%;
+    background-color:#f9f9f9;
+   }
+   .grid-item-9{
+    display: flex;
+    box-shadow:0 2px 4px 0 rgba(0,0,0,.2);
+    border-radius: 5%;
+    background-color:#f9f9f9;
+   }
+   .grid-item-10{
+    display: flex;
+    box-shadow:0 2px 4px 0 rgba(0,0,0,.2);
+    border-radius: 5%;
+    background-color:#f9f9f9;
+   }
+   .grid-item-11{
+    display: flex;
+    box-shadow:0 2px 4px 0 rgba(0,0,0,.2);
+    border-radius: 5%;
+    background-color:#f9f9f9;
+   }
+   .grid-item-12{
+    display: flex;
+    box-shadow:0 2px 4px 0 rgba(0,0,0,.2);
+    border-radius: 5%;
+    background-color:#f9f9f9;
+   }
+   .grid-item-13{
+    display: flex;
+    box-shadow:0 2px 4px 0 rgba(0,0,0,.2);
+    border-radius: 5%;
+    background-color:#f9f9f9;
+   }
+   .grid-item-14        {
+    display: flex;
+    box-shadow:0 2px 4px 0 rgba(0,0,0,.2);
+    border-radius: 5%;
+    background-color:#f9f9f9;
+   }
+   .grid-container h2{
+    line-height: 4;
+   }
+   .right-cont li{
+    display:inline-flex;
+    list-style: none;
+   }
+   .right-cont button{
+    margin-left: 40px;
+    background-color: #1f4138;
+    color: white;
+    font-weight: bold;
+    font-size: large;
+    height: 35px;
+    width: 130px;
+    border-radius: 20px;
+   }
+   .obfooter{
+    line-height: 3;
+    font-size: small;
+    padding-left: 5%;
+    background-color:#f9f9f9 ;
+   }
+   .home{
+    color: #0e382c;
+    font-weight: 1000;
+   }
+   .calories{
+    font-size:15px;
+    color:#a7a7a7;
+    font-family: Pike_Regular,Helvetica,sans-serif;;
+   }
+    @media(max-width:750px)
+    {
+        #par1{
+            padding-left: 30px;
+        }
+        .grid-container{
+            grid-template-columns: 400px;
+            grid-template-rows: 300px;
+            grid-row-gap: 60px;
+            grid-column-gap:2px; 
+            padding-top: 4%;
+            align-items: center;
+            justify-items: center;
+            justify-content: space-around;
+            padding-left: 1%;
+        }
+        .Bestsellercontent{
+            align-items: center;
+            justify-content: center;
+            padding-bottom: 40px;
+        }
+        .foodtype li{
+            display:flexbox;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .right-cont button{
+            margin-bottom: 10px;
+        }
+        
+        
+    }
+    </style>
+</head>
+<body vlink="000000">
+    <div class="navbar" >
+        <img class="image" src="images/starbucks.png" >
+        <ul class="header">
+            <li><a href="moonbucks.html">Home</a></li>
+            <li><a href="gift.html">Gift</a></li>
+            <li><a href="orders.html" class="home">Order</a></li>
+            <li><a>Pay</a></li>
+            <li><a>Store</a></li>
+        </ul>
+            <input type="text" placeholder="    Looking for something specific?" name="search" class="search">
+            <img src="images/user.png" class="about">    
+    </div>
+        <p id="par1">Home > Order</p>
+        <div class="foodtype">
+            <ul>
+                <li><a href="orders.html" class="home">Bestseller</a></li>
+                <li>|</li>
+                <li>Drinks</li>
+                <li>|</li>
+                <li>Food</li>
+                <li>|</li>
+                <li>Merchandise</li>
+                <li>|</li>
+                <li>Coffee At Home</li>
+                <li>|</li>  
+                <li>Ready To Eat</li>
+            </ul>
+        </div>
+
+        <div class="Bestsellercontent">
+            <h3>Bestseller</h3>
+            <p>Everyone's favorite Starbucks put together in a specially curated collection.</p>
+        </div>
+        <div class="grid-container">
+            <div class="grid-item-1">
+                        <div class="left-cont"><img src="https://starbucks-cdn-01.s3.ap-south-1.amazonaws.com/Items/Small/100433.jpg" class="menuimg"></li>
+                        </div>
+                        <div class="right-cont">
+                                <img src="https://www.starbucks.in/assets/icon/veg.svg"style="width: 16px; height: 16px;">
+                                <h3>Caffe Americano</h3>
+                                <p class="calories">SHORT(237 Ml) .0 kcal</p>
+                                <p style="color: #cca55e; font-size:large;"><img src="https://www.starbucks.in/assets/icon/Solid%20Large.svg" height="15px"> Bestseller</p>
+                                <p>Rich in flavour, full-bodied espresso with hot water in 
+                                   true European style.</p>
+                                <ul>
+                                    <li><h2>&#8377 252.00</h2></li>
+                                    <li><button>Add Item</button></li>
+                                </ul>
+                        </div>
+               
+            </div>
+            <div class="grid-item-2">
+                    <div class="left-cont"><img src="https://starbucks-cdn-01.s3.ap-south-1.amazonaws.com/Items/Small/100501.jpg" class="menuimg">
+                    </div>
+                    <div class="right-cont">
+                            <img src="https://www.starbucks.in/assets/icon/veg.svg"style="width: 16px; height: 16px;">
+                            <h3>Java Chip Frappuccino</h3>
+                            <p class="calories">TALL(354 ML) .392 kcal</p>
+                            <p style="color: #cca55e; font-size:large;"><img src="https://www.starbucks.in/assets/icon/Solid%20Large.svg" height="15px"> Bestseller</p>
+                            <p>We blend mocha sauce , Frappuccino chips with roast coffee and milk and ice.</p>
+                            <ul>
+                                <li><h2>&#8377 351.75</h2></li>
+                                <li><button>Add Item</button></li>
+                            </ul>
+                    </div> 
+            </div>
+            <div class="grid-item-3">
+                <div class="left-cont"><img src="https://starbucks-cdn-01.s3.ap-south-1.amazonaws.com/Items/Small/103515.jpg" class="menuimg">
+                </div>
+                <div class="right-cont">
+                        <img src="https://www.starbucks.in/assets/icon/veg.svg"style="width: 16px; height: 16px;">
+                        <h3>Double Chocolate Chip Frappuccino</h3>
+                        <p class="calories">TALL(354 ML) .392 kcal</p>
+                        <p style="color: #cca55e; font-size:large;"><img src="https://www.starbucks.in/assets/icon/Solid%20Large.svg" height="15px"> Bestseller</p>
+                        <p>We blend mocha sauce , Frappuccino chips with roast coffee and milk and ice.</p>
+                        <ul>
+                            <li><h2>&#8377 383.25</h2></li>
+                            <li><button>Add Item</button></li>
+                        </ul>
+                </div> 
+            </div>
+            <div class="grid-item-4">
+                <div class="left-cont"><img src="https://starbucks-cdn-01.s3.ap-south-1.amazonaws.com/Items/Small/105468.jpg " class="menuimg">
+                </div>
+                <div class="right-cont">
+                        <img src="https://www.starbucks.in/assets/icon/veg.svg"style="width: 16px; height: 16px;">
+                        <h3>Cold coffee</h3>
+                        <p class="calories">TALL(354 ML) .354 kcal</p>
+                        <p style="color: #cca55e; font-size:large;"><img src="https://www.starbucks.in/assets/icon/Solid%20Large.svg" height="15px"> Bestseller</p>
+                        <p>Our signature espresso blended with delicate vanilla flavour and milk.</p>
+                        <ul>
+                            <li><h2>&#8377 351.75</h2></li>
+                            <li><button>Add Item</button></li>
+                        </ul>
+                </div> 
+            </div>
+            <div class="grid-item grid-item-5">
+                <div class="left-cont"><img src="https://starbucks-cdn-01.s3.ap-south-1.amazonaws.com/Items/Small/100419.jpg " class="menuimg" >
+                </div>
+                <div class="right-cont">
+                        <img src="https://www.starbucks.in/assets/icon/veg.svg"style="width: 16px; height: 16px;">
+                        <h3>Cappuccino</h3>
+                        <p class="calories">SHORT(237 ML) .104 Kcal</p>
+                        <p style="color: #cca55e; font-size:large;"><img src="https://www.starbucks.in/assets/icon/Solid%20Large.svg" height="15px"> Bestseller</p>
+                        <p>Dark,Rich in flavour espresso under a smooth and stretched layer of thick foam.</p>
+                        <ul>
+                            <li><h2>&#8377 273.00</h2></li>
+                            <li><button>Add Item</button></li>
+                        </ul>
+                </div> 
+            </div>
+            <div class="grid-item grid-item-6">
+                <div class="left-cont"><img src="https://starbucks-cdn-01.s3.ap-south-1.amazonaws.com/Items/Small/104362.jpg " class="menuimg">
+                </div>
+                <div class="right-cont">
+                        <img src="https://www.starbucks.in/assets/icon/nonveg.svg"style="width: 16px; height: 16px;">
+                        <h3>Egg White and Chicken In Multigrain Croiss</h3>
+                        <p class="calories">PER SERVE (200 g) - 541 Kcal</p>
+                        <p style="color: #cca55e; font-size:large;"><img src="https://www.starbucks.in/assets/icon/Solid%20Large.svg" height="15px"> Bestseller</p>
+                        <p>Fluffy egg white omlette and chicken ham.... </p>
+                        <ul>
+                            <li><h2>&#8377 346.50</h2></li>
+                            <li><button>Add Item</button></li>
+                        </ul>
+                </div> 
+            </div>
+            <div class="grid-item grid-item-7">
+                <div class="left-cont"><img src="https://starbucks-cdn-01.s3.ap-south-1.amazonaws.com/Items/Small/109270.jpg" class="menuimg">
+                </div>
+                <div class="right-cont">
+                        <img src="https://www.starbucks.in/assets/icon/nonveg.svg"style="width: 16px; height: 16px;">
+                        <h3>Butter Croissant</h3>
+                        <p class="calories">PER SERVE (75 g) - 255 Kcal</p>
+                        <p style="color: #cca55e; font-size:large;"><img src="https://www.starbucks.in/assets/icon/Solid%20Large.svg" height="15px"> Bestseller</p>
+                        <p>A flaky and buttery French style pastry served with butter. Add on berry preserve available.</p>
+                        <ul>
+                            <li><h2>&#8377 257.25</h2></li>
+                            <li><button>Add Item</button></li>
+                        </ul>
+                </div> 
+            </div>
+            <div class="grid-item grid-item-8">
+                <div class="left-cont"><img src="https://starbucks-cdn-01.s3.ap-south-1.amazonaws.com/Items/Small/108177.jpg" class="menuimg">
+                </div>
+                <div class="right-cont">
+                        <img src="https://www.starbucks.in/assets/icon/veg.svg"style="width: 16px; height: 16px;">
+                        <h3>Creamy Spinach and Corn Pocket</h3>
+                        <p class="calories">PER SERVE (160 g) - 358.4 Kcal</p>
+                        <p style="color: #cca55e; font-size:large;"><img src="https://www.starbucks.in/assets/icon/Solid%20Large.svg" height="15px"> Bestseller</p>
+                        <p>A creamy spinach and corn filling encased in a buttery French style dough.</p>
+                        <ul>
+                            <li><h2>&#8377 220.50</h2></li>
+                            <li><button>Add Item</button></li>
+                        </ul>
+                </div> 
+            </div>
+            <div class="grid-item grid-item-9">
+                <div class="left-cont"><img src="https://starbucks-cdn-01.s3.ap-south-1.amazonaws.com/Items/Small/107704.jpg" class="menuimg">
+                </div>
+                <div class="right-cont">
+                        <img src="https://www.starbucks.in/assets/icon/nonveg.svg"style="width: 16px; height: 16px;">
+                        <h3>New York Cheesecake</h3>
+                        <p class="calories">PER SERVE (150 g) - 485 Kcal</p>
+                        <p style="color: #cca55e; font-size:large;"><img src="https://www.starbucks.in/assets/icon/Solid%20Large.svg" height="15px"> Bestseller</p>
+                        <p>The Classic New York Cheese cake with 
+                            rich, creamy and a crumbly biscuit base.</p>
+                        <ul>
+                            <li><h2>&#8377 378.00</h2></li>
+                            <li><button>Add Item</button></li>
+                        </ul>
+                </div> 
+            </div>
+            <div class="grid-item grid-item-10">
+                <div class="left-cont"><img src="https://starbucks-cdn-01.s3.ap-south-1.amazonaws.com/Items/Small/100100.jpg" class="menuimg">
+                </div>
+                <div class="right-cont">
+                        <img src="https://www.starbucks.in/assets/icon/veg.svg"style="width: 16px; height: 16px;">
+                        <h3>Tandoori Paneer Sandwich</h3>
+                        <p class="calories">PER SERVE (200 g) - 518 Kcal</p>
+                        <p style="color: #cca55e; font-size:large;"><img src="https://www.starbucks.in/assets/icon/Solid%20Large.svg" height="15px"> Bestseller</p>
+                        <p>Paneer and vegetables flavoured with tandoori masala in a multigrain bread.</p>
+                        <ul>
+                            <li><h2>&#8377 346.50</h2></li>
+                            <li><button>Add Item</button></li>
+                        </ul>
+                </div> 
+            </div>
+            <div class="grid-item grid-item-11">
+                <div class="left-cont"><img src="https://starbucks-cdn-01.s3.ap-south-1.amazonaws.com/Items/Small/100075.jpg" class="menuimg">
+                </div>
+                <div class="right-cont">
+                        <img src="https://www.starbucks.in/assets/icon/nonveg.svg"style="width: 16px; height: 16px;">
+                        <h3>Blueberry Muffin</h3>
+                        <p class="calories">PER SERVE (120 g) - 375.5 Kcal</p>
+                        <p style="color: #cca55e; font-size:large;"><img src="https://www.starbucks.in/assets/icon/Solid%20Large.svg" height="15px"> Bestseller</p>
+                        <p>Buttery vanilla cake with berries dusted with granulated sugar for a  crunchy texture.</p>
+                        <ul>
+                            <li><h2>&#8377 294.00</h2></li>
+                            <li><button>Add Item</button></li>
+                        </ul>
+                </div> 
+            </div>
+            <div class="grid-item grid-item-12">
+                <div class="left-cont"><img src="https://starbucks-cdn-01.s3.ap-south-1.amazonaws.com/Items/Small/103689.jpg" class="menuimg">
+                </div>
+                <div class="right-cont">
+                        <img src="https://www.starbucks.in/assets/icon/nonveg.svg"style="width: 16px; height: 16px;">
+                        <h3>Banana Chocolate Loaf Cake</h3>
+                        <p class="calories">PER SERVE (125 g) - 385 Kcal</p>
+                        <p style="color: #cca55e; font-size:large;"><img src="https://www.starbucks.in/assets/icon/Solid%20Large.svg" height="15px"> Bestseller</p>
+                        <p>English cake with rich taste of banana and chocolate.</p>
+                        <ul>
+                            <li><h2>&#8377 304.50</h2></li>
+                            <li><button>Add Item</button></li>
+                        </ul>
+                </div> 
+            </div>
+            <div class="grid-item grid-item-13">
+                <div class="left-cont"><img src="https://starbucks-cdn-01.s3.ap-south-1.amazonaws.com/Items/Small/107707.jpg" class="menuimg">
+                </div>
+                <div class="right-cont">
+                        <img src="https://www.starbucks.in/assets/icon/veg.svg"style="width: 16px; height: 16px;">
+                        <h3>Double Chocolate Chip Cookie</h3>
+                        <p class="calories">PER SERVE (80 g) - 385.3 Kcal</p>
+                        <p style="color: #cca55e; font-size:large;"><img src="https://www.starbucks.in/assets/icon/Solid%20Large.svg" height="15px"> Bestseller</p>
+                        <p>A soft and chewy chocolate cookie topped with chocolate chips for the perfect textured bite.</p>
+                        <ul>
+                            <li><h2>&#8377 278.25</h2></li>
+                            <li><button>Add Item</button></li>
+                        </ul>
+                </div> 
+            </div>
+            <div class="grid-item grid-item-14">
+                <div class="left-cont"><img src="https://starbucks-cdn-01.s3.ap-south-1.amazonaws.com/Items/Small/101728.jpg" class="menuimg">
+                </div>
+                <div class="right-cont">
+                        <img src="https://www.starbucks.in/assets/icon/nonveg.svg"style="width: 16px; height: 16px;">
+                        <h3>Chicken Salad Sandwich</h3>
+                        <p class="calories">PER SERVE (180 g) - 421 Kcal</p>
+                        <p style="color: #cca55e; font-size:large;"><img src="https://www.starbucks.in/assets/icon/Solid%20Large.svg" height="15px"> Bestseller</p>
+                        <p>A creamy grilled chicken salad encased in brown bread.</p>
+                        <ul>
+                            <li><h2>&#8377 351.75</h2></li>
+                            <li><button>Add Item</button></li>
+                        </ul>
+                </div> 
+            </div>
+          </div>
+          <br><br><br>
+          <div class="obfooter">
+            <p>An average active adult requires 2,000 kcal energy per day, however, calorie needs may vary.<br>
+            <img src="https://www.starbucks.in/assets/icon/info.png">
+                FSSAI License No.</p>
+            
+          </div>
+</body>
+</html>

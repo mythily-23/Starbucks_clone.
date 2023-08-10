@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gift Cards</title>
+    <link href="style1.css" rel="stylesheet">
+    <style>
+        *{
+            margin:0px;
+            padding:0px;
+            box-sizing: border-box;
+            font-family: SoDoSans_Light,Helvetica,sans-serif!important;;
+        }
+        .header li{
+    display:inline;
+    font-size: 20px;
+    font-family:'Poppins',sans-serif;
+    font-weight:lighter;
+    align-items: center;
+    padding: 0px 40px 0px 60px;
+
+
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    padding-top: 25px;
+    padding-bottom: 20px;
+    position:static;
+    height: 100px;
+    width:100%;
+    justify-content:space-around ;
+    background-color: white;
+    box-shadow:0 2px 4px 0 rgba(0,0,0,.2);
+}
+.image{
+    height:90% ;
+    
+}
+.about
+{
+    height:80%;
+    align-items:center;
+   
+}
+.search{
+    border-radius: 20px;
+    width:18%;
+    height:40px;
+    font-size: large;
+}
+a{
+    text-decoration: none;
+}
+.home{
+    color: #0e382c;
+    font-weight: 1000;
+}
+
+        .navbar a:hover{
+    color: #006241;
+    font-weight: 1000;
+}
+        #par1 {
+            padding-left: 70px;
+            font-weight: lighter;
+            font-size: 18px;
+            background-color: white;
+            height: 50px;
+            padding-top: 12px;
+        }
+
+        .bgofdiv1 {
+            background-color: #10392e;
+            width: 100%;
+            height: 20%;
+            padding: 3%;
+
+        }
+
+        .bgofdiv1 ul {
+            display: flex;
+            justify-content: space-around;
+            list-style: none;
+        }
+
+        .bgofdiv1 li {
+            display: inline;
+        }
+
+        .Savannah {
+            padding: 1%;
+            background-color: rgb(48, 169, 129);
+            border-radius: 12px;
+
+        }
+
+        .Savannah img {
+
+            width: 125px;
+            height: 210px;
+        }
+
+        #ordernow {
+            border-radius: 30px;
+            width: 220px;
+            height: 50px;
+            position: relative;
+            top: 60%;
+            right: 1%;
+            font-size: 19px;
+        }
+
+        .gifttype {
+            background-color: #f2f0eb;
+            height: 20%;
+            padding: 1%;
+            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .2);
+        }
+
+        .gifttype li {
+            display: inline;
+            padding-left: 4%;
+            font-size: 19px;
+            padding-right: 0.05%;
+            height: 20px;
+            color: #697974;
+        }
+
+        .grids {
+            display: grid;
+            grid-template-columns: repeat(3, 30%);
+            grid-row-gap: 60px;
+            grid-column-gap: 3%;
+            padding-top: 4%;
+            align-items: center;
+            justify-items: center;
+            justify-content: space-around;
+            padding-left: 3%;
+            padding-right: 3%;
+        }
+
+        .sub li {
+            display: inline;
+        }
+
+        .sub {
+            display: flex;
+            justify-content: space-around;
+            list-style: none;
+        }
+
+        #additem {
+            border-radius: 30px;
+            border-color: #36826d;
+            width: 120px;
+            height: 40px;
+            background-color: #36826d;
+            color: white;
+        }
+
+        .grid1 {
+            display: flex;
+            box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, .2);
+            border-radius: 20px;
+            background-color: #f9f9f9;
+        }
+
+        .sub img {
+            position: relative;
+            right: 50px;
+            top: 7%;
+            box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, .2);
+            border-radius: 15px;
+        }
+
+        .sub p {
+            font-size: 20px;
+        }
+
+        .grids-2 {
+            display: grid;
+            grid-template-columns: repeat(3, 30%);
+            grid-row-gap: 60px;
+            grid-column-gap: 3%;
+            padding-top: 4%;
+            align-items: center;
+            justify-items: center;
+            justify-content: space-around;
+            padding-left: 3%;
+            padding-right: 3%;
+        }
+
+    footer .container{
+    background-color: #0e382c;
+    width: 100%;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 150px;
+}
+.row td{
+    padding:15px;
+}
+footer .row ul{
+    list-style: none;
+}
+
+footer .row h3{
+    color: white;
+    margin-bottom: 20px;
+    font-size: 25px;
+    position: relative;
+}
+
+.row ul li{
+    padding: 10px 0px;
+}
+
+.row ul li a{
+    color: white;
+    font-family: SoDoSans_Light;
+    font-weight: lighter;
+    font-size: 18px;
+}
+.copyrights{
+    background-color: #0e382c;
+    height: 20%;
+    padding: 1%;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .2);
+}
+
+.copyrights li{
+    display: inline;
+    padding-left: 4%;
+    font-size: 16px;
+    padding-right: 0.05%;
+    height: 20px;
+    color: white;
+}
+
+        @media(max-width:1200px) {
+            .grids {
+                grid-template-columns: 400px;
+                grid-template-rows: 300px;
+                grid-row-gap: 60px;
+                grid-column-gap: 2px;
+                padding-top: 4%;
+                align-items: center;
+                justify-items: center;
+                justify-content: space-around;
+                padding-left: 1%;
+            }
+
+            .grids-2 {
+                grid-template-columns: 400px;
+                grid-template-rows: 300px;
+                grid-row-gap: 60px;
+                grid-column-gap: 2px;
+                padding-top: 4%;
+                align-items: center;
+                justify-items: center;
+                justify-content: space-around;
+                padding-left: 1%;
+            }
+
+            .gifttype li {
+                display: flexbox;
+                justify-content: space-around;
+                align-items: center;
+            }
+
+            .bgofdiv1 {
+                display: flexbox;
+                justify-content: space-around;
+                align-items: center;
+            }
+            
+        }
+        @media (max-width:1000px)
+        {
+            .row{
+        flex-direction: column;
+        padding: 30px 100px;
+    }
+    footer .row ul{
+        margin-left: 20px;
+        margin-bottom: 20px;
+    }
+    .navbar{
+        flex-direction: column;
+        height:200px;
+    }
+    .navbar input{
+        height: 25px;
+    }
+    .navbar_image1{
+        height: 50px;
+    }.navbar_image2{
+        height: 40px;
+    }
+    .header li{
+        padding: 0px 10px 0px 40px;
+    }
+        }
+        
+    </style>
+</head>
+
+<body vlink="000000">
+    <div class="navbar" >
+        <img class="image" src="images/starbucks.png" >
+        <ul class="header" >
+            <li><a href="moonbucks.html">Home</a></li>
+            <li><a href="gift.html" class="home">Gift</a></li>
+            <li><a href="orders.html">Order</a></li>
+            <li><a>Pay</a></li>
+            <li><a>Store</a></li>   
+        </ul>
+            <input type="text" placeholder="    Looking for something specific?" name="search" class="search">
+            <img src="images/user.png" class="about">    
+    </div>
+    <p id="par1">Home > Gift Cards</p>
+    <div class="bgofdiv1">
+        <div class="Savannah">
+            <ul>
+                <li><img src="https://preprodtsbstorage.blob.core.windows.net/cms/uploads/5_2a14ea8302.png" alt="cup">
+                </li>
+                <li style="padding-top:5px;font-size:20px ">
+                    <p> Introducing</p>
+                    <br>
+                    <p id="tribute" style="font-size:30px;"><b> Savannah Animals Mug </b></p><br>
+                    <p> Wander into the wilderness with every sip in this Savannah Animals Mug with giraffe head
+                        ornament on rim. </p>
+                    <br>
+                    <p><i>For</i></p>
+                    <p>&#x20b9 2190.00</p>
+                </li>
+                <li><button id="ordernow"><b>order now</b></button></li>
+            </ul>
+        </div>
+    </div>
+    <div class="gifttype">
+        <ul>
+            <li>FEATURED</li>
+            <li>|</li>
+            <li>ANYTIME</li>
+            <li>|</li>
+            <li>CONGRATULATIONS</li>
+            <li>|</li>
+            <li>THANK YOU</li>
+        </ul>
+    </div>
+    <div style="padding:1%; margin-top: 0;font-size: 23px;font-weight: 400;text-align: start;padding-left: 3%;">
+        <p style="font-size:30px;"><b>Anytime</b></p>
+    </div>
+    <hr>
+    <div class="grids">
+        <div class="grid1">
+            <ul class="sub">
+                <li class="left-cont" style="padding: 2%;">
+                    <img src="https://preprodtsbstorage.blob.core.windows.net/cms/uploads/17d2c94d_1bbe_47d5_874c_c32af5bb2c18_fc9ce3422f.png"
+                        width="200px" height="115px">
+                </li>
+                <li class="right-cont">
+                    <div style="padding-top:5% ;padding-bottom:2%;">
+                        <p><b>India Exclusive</b></p>
+                        <br>
+                        <p style="font-size:16px ;"> Bring in the festive season and make each celebration memorable.
+                        </p>
+                        <br><br>
+                    </div>
+                    <div style="padding-bottom: 10%;">
+                        <button id="additem"><b>Add Item</b></button>
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+        <div class="grid1">
+            <ul class="sub">
+                <li class="left-cont" style="padding: 2%;">
+                    <img src="https://preprodtsbstorage.blob.core.windows.net/cms/uploads/71d3780c_be6e_46b1_ab01_8a2bce244a7f_1_26502c2483.png"
+                        width="200px" height="115px">
+                </li>
+                <li class="right-cont">
+                    <div style="padding-top:5% ;padding-bottom:2%;">
+                        <p><b>Starbucks Coffee </b></p>
+                        <br>
+                        <p style="font-size:16px ;"> Starbucks is best when shared. Treat your pals to a good cup of
+                            coffee. </p>
+                        <br><br>
+                    </div>
+                    <div style="padding-bottom: 10%;">
+                        <button id="additem"><b>Add Item</b></button>
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+        <div class="grid1">
+            <ul class="sub">
+                <li class="left-cont" style="padding: 2%;">
+                    <img src="https://preprodtsbstorage.blob.core.windows.net/cms/uploads/7c6f7c64_3f89_4ba2_9af8_45fc6d94ad35_df43378185.jpg"
+                        width="200px" height="115px">
+                </li>
+                <li class="right-cont">
+                    <div style="padding-top:5% ;padding-bottom:2%;">
+                        <p><b>U Keep Me Warm</b></p>
+                        <br>
+                        <p style="font-size:16px ;"> Captivating, cosy, coffee. Gift your loved ones this Starbucks Gift
+                            Card. </p>
+                        <br><br>
+                    </div>
+                    <div style="padding-bottom: 10%;">
+                        <button id="additem"><b>Add Item</b></button>
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+    <br>
+    <div
+        style="padding:1%; margin-top: 0;font-size: 23px;font-weight: 400;text-align: start;padding-left: 3%;padding-top:2%;">
+        <p style="font-size:30px;"><b>Congratulations</b></p>
+    </div>
+    <hr>
+    <div class="grids-2" style="padding-bottom:10%;">
+        <div class="grid1">
+            <ul class="sub">
+                <li class="left-cont" style="padding: 2%;">
+                    <img src="https://preprodtsbstorage.blob.core.windows.net/cms/uploads/97ee3280_2f05_43ad_bd94_f5c184d4f502_1_2d1b049023.png"
+                        width="200px" height="115px">
+                </li>
+                <li class="right-cont" style="padding-right: 3px;">
+                    <div style="padding-top:5% ;padding-bottom:2%;">
+                        <p><b>Congrats</b></p>
+                        <br>
+                        <p style="font-size:16px ;"> Coffee. Cheer. Celebrate. Enjoy each of your special moments with
+                            Starbucks. </p>
+                        <br><br>
+                    </div>
+                    <div style="padding-bottom: 10%;">
+                        <button id="additem"><b>Add Item</b></button>
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div>
+                    <ul>
+                        <li><img src="images/logo.png" alt=""></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>About Us</h3>
+                    <ul>
+                        <li><a href="#">Our Heritage</a></li>
+                        <li><a href="#">Our Company</a></li>
+                        <li><a href="#">CoffeeHouse</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Responsibility</h3>
+                    <ul>
+                        <li><a href="#">Community</a></li>
+                        <li><a href="#">Ethical Sourcing</a></li>
+                        <li><a href="#">Environment</a></li>
+                        <li><a href="#">Diversity</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">Delivery</a></li>
+                        <li><a href="#">Season's Gifting</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Customers Service</a></li>
+                        <li><a href="#">FAQs</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>SOCIAL MEDIA</h3>
+                    <table>
+                        <tr>
+                            <td><img src="images/instagram.svg" alt=""></td>
+                            <td><img src="images/facebook.svg" alt=""></td>
+                            <td><img src="images/twitter.svg" alt=""></td>
+                        </tr>
+                    </table>
+                </div>
+                <div>
+                    <img src="images/appstoreAndroid.png" alt="">
+                    <br>
+                    <img src="images/appstoreiOS.png" alt="">
+                </div>
+            </div>
+            <hr>
+            
+            <div class="copyrights">
+                <ul>
+                    <li>Web Accessiblity</li>
+                    <li>|</li>
+                    <li>Privacy Statement</li>
+                    <li>|</li>
+                    <li>Terms of Use</li>
+                    <li>|</li>
+                    <li>Contact Us </li>
+                </ul>
+                <div>
+                    <p style="padding-left: 79%;color: aliceblue;">© 2023 Starbucks Coffee Company. All rights reserved.</p>
+                </div>
+                <br><br>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
